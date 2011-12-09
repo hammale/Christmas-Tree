@@ -1,0 +1,9 @@
+name: ChristmasTree
+version: 1.0
+description: CHRISTMAS TREEZ!!
+authors: [hammale]
+main: me.hammale.tree.tree
+commands:
+    tree:
+        description: "Use this command to generate a christmas tree!"
+        usage: "Christmas Tree 1.0 commands: /tree create"
