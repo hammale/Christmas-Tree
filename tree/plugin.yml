@@ -4,6 +4,6 @@ description: CHRISTMAS TREEZ!!
 authors: [hammale]
 main: me.hammale.tree.tree
 commands:
-    tree:
+    ctree:
         description: "Use this command to generate a christmas tree!"
-        usage: "Christmas Tree 1.0 commands: /tree create"
+        usage: "ChristmasTree 1.0 commands: /ctree create"

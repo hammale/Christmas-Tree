@@ -28,7 +28,7 @@ public class cmdExecutor implements CommandExecutor {
 			p = (Player) sender;
 		}
 		
-		if (command.getName().equalsIgnoreCase("tree")) {
+		if (command.getName().equalsIgnoreCase("ctree")) {
 			
 			if(args.length == 1){
 			String arg = args[0];

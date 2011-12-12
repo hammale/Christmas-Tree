@@ -1,6 +1,7 @@
 package me.hammale.tree;
 
 import org.bukkit.plugin.PluginDescriptionFile;
+import org.bukkit.plugin.PluginManager;
 import org.bukkit.Server;
 import org.bukkit.World;
 import org.bukkit.World.Environment;
@@ -13,8 +14,7 @@ public class tree extends JavaPlugin {
 	static Server server;
 	static Plugin plugin;
 	
-	//private final SewerBlockListener blockListener = new SewerBlockListener();
-	//public final SewerPlayerListener playerListener = new SewerPlayerListener();
+	  private final treeBlockListener blockListener = new treeBlockListener(this);
 	
 	private cmdExecutor cmdExecutor;
 	
@@ -27,8 +27,9 @@ public class tree extends JavaPlugin {
 		PluginDescriptionFile pdfFile = this.getDescription();
 		System.out.println("[ChristmassTree] Version " + pdfFile.getVersion() + " Enabled!");
 	    cmdExecutor = new cmdExecutor(this);
-		getCommand("tree").setExecutor(cmdExecutor);
-		
+		getCommand("ctree").setExecutor(cmdExecutor);
+	    PluginManager pm = getServer().getPluginManager();
+	    pm.registerEvent(Event.Type.LEAVES_DECAY, this.blockListener, Event.Priority.Normal, this);
 		server = this.getServer();
 		plugin = this;
     }

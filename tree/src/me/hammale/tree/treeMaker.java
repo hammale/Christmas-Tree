@@ -1,7 +1,6 @@
 package me.hammale.tree;
 
 import java.util.Random;
-
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.block.BlockFace;
@@ -11,46 +10,269 @@ public class treeMaker {
 	Random gen = new Random();
 	public int tree(Block set,  BlockFace bf){
 		int x = 1;
-		int a = 15;
-		while (x < a) {
-			int u = 1;
-			while(u != a){
-				int newx = x-1;
-				//START//
-				Block otherset = set.getRelative(bf, newx);
-				otherset = otherset.getRelative(BlockFace.UP, u);
-				Block set1 = null;
-				int setter = 1;
-				while(setter <= a){
-					set1 = otherset.getRelative(BlockFace.EAST, setter);
-					set1.setTypeId(18);
-					setter++;
+		int a = 20;
+		int i = 1;
+		int s = 1;
+		while (x < a) {			
+			Block up = set.getRelative(BlockFace.UP, x);
+			while(i < a){
+				int i1 = 1;
+				Block set1 = up.getRelative(BlockFace.EAST, i);
+				Block set01 = up.getRelative(BlockFace.WEST, i);
+				while(i1 < a){
+					Block set2 = set1.getRelative(BlockFace.NORTH, i1);
+					Block set3 = set01.getRelative(BlockFace.NORTH, i1);
+					//set2.setTypeId(18);
+					if(i1 == 7  && i == 1){
+
+						while(s < 7){
+							Block clr = set2.getRelative(BlockFace.NORTH, s);
+							clr.setTypeId(18);
+							s++;
+						}
+						s = 1;
+					}else if(i1 == 6  && i == 2){
+
+						while(s < 8){
+							Block clr = set2.getRelative(BlockFace.NORTH, s);
+							clr.setTypeId(18);
+							s++;
+						}
+						s = 1;
+					}else if(i1 == 5  && i == 3){
+
+						while(s < 9){
+							Block clr = set2.getRelative(BlockFace.NORTH, s);
+							clr.setTypeId(18);
+							s++;
+						}
+						s = 1;
+					}else if(i1 == 4  && i == 4){
+
+						while(s < 9){
+							Block clr = set2.getRelative(BlockFace.NORTH, s);
+							clr.setTypeId(18);
+							s++;
+						}
+						s = 1;
+					}else if(i1 == 3  && i == 5){
+
+						while(s < 9){
+							Block clr = set2.getRelative(BlockFace.NORTH, s);
+							clr.setTypeId(18);
+							s++;
+						}
+						s = 1;
+					}else if(i1 == 2  && i == 6){
+
+						while(s < 9){
+							Block clr = set2.getRelative(BlockFace.NORTH, s);
+							clr.setTypeId(18);
+							s++;
+						}
+						s = 1;
+					}else if(i1 == 1  && i == 7){
+
+						while(s < 9){
+							Block clr = set2.getRelative(BlockFace.NORTH, s);
+							clr.setTypeId(18);
+							s++;
+						}
+						s = 1;
+					}
+					
+					//start corner 2//
+					if(i1 == 20  && i == 7){
+
+						while(s < 9){
+							Block clr = set2.getRelative(BlockFace.SOUTH, s);
+							clr.setTypeId(18);
+							s++;
+						}
+						s = 1;
+					}else if(i1 == 19  && i == 6){
+
+						while(s < 9){
+							Block clr = set2.getRelative(BlockFace.SOUTH, s);
+							clr.setTypeId(18);
+							s++;
+						}
+						s = 1;
+					}else if(i1 == 18  && i == 5){
+
+						while(s < 9){
+							Block clr = set2.getRelative(BlockFace.SOUTH, s);
+							clr.setTypeId(18);
+							s++;
+						}
+						s = 1;
+					}else if(i1 == 17  && i == 4){
+
+						while(s < 9){
+							Block clr = set2.getRelative(BlockFace.SOUTH, s);
+							clr.setTypeId(18);
+							s++;
+						}
+						s = 1;
+					}else if(i1 == 16  && i == 3){
+
+						while(s < 9){
+							Block clr = set2.getRelative(BlockFace.SOUTH, s);
+							clr.setTypeId(18);
+							s++;
+						}
+						s = 1;
+					}else if(i1 == 15  && i == 2){
+
+						while(s < 9){
+							Block clr = set2.getRelative(BlockFace.SOUTH, s);
+							clr.setTypeId(18);
+							s++;
+						}
+						s = 1;
+					}else if(i1 == 14  && i == 1){
+
+						while(s < 7){
+							Block clr = set2.getRelative(BlockFace.SOUTH, s);
+							clr.setTypeId(18);
+							s++;
+						}
+						s = 1;
+					}
+								
+					//end corner 2//
+					
+					//START OTHER SIDE
+									
+					if(i1 == 7  && i == 1){
+
+						while(s < 7){
+							Block clr = set3.getRelative(BlockFace.NORTH, s);
+							clr.setTypeId(18);
+							s++;
+						}
+						s = 1;
+					}else if(i1 == 6  && i == 2){
+
+						while(s < 8){
+							Block clr = set3.getRelative(BlockFace.NORTH, s);
+							clr.setTypeId(18);
+							s++;
+						}
+						s = 1;
+					}else if(i1 == 5  && i == 3){
+
+						while(s < 9){
+							Block clr = set3.getRelative(BlockFace.NORTH, s);
+							clr.setTypeId(18);
+							s++;
+						}
+						s = 1;
+					}else if(i1 == 4  && i == 4){
+
+						while(s < 9){
+							Block clr = set3.getRelative(BlockFace.NORTH, s);
+							clr.setTypeId(18);
+							s++;
+						}
+						s = 1;
+					}else if(i1 == 3  && i == 5){
+
+						while(s < 9){
+							Block clr = set3.getRelative(BlockFace.NORTH, s);
+							clr.setTypeId(18);
+							s++;
+						}
+						s = 1;
+					}else if(i1 == 2  && i == 6){
+
+						while(s < 9){
+							Block clr = set3.getRelative(BlockFace.NORTH, s);
+							clr.setTypeId(18);
+							s++;
+						}
+						s = 1;
+					}else if(i1 == 1  && i == 7){
+
+						while(s < 9){
+							Block clr = set3.getRelative(BlockFace.NORTH, s);
+							clr.setTypeId(18);
+							s++;
+						}
+						s = 1;
+					}
+					
+					//start corner 2//
+					if(i1 == 20  && i == 7){
+
+						while(s < 9){
+							Block clr = set3.getRelative(BlockFace.SOUTH, s);
+							clr.setTypeId(18);
+							s++;
+						}
+						s = 1;
+					}else if(i1 == 19  && i == 6){
+
+						while(s < 9){
+							Block clr = set3.getRelative(BlockFace.SOUTH, s);
+							clr.setTypeId(18);
+							s++;
+						}
+						s = 1;
+					}else if(i1 == 18  && i == 5){
+
+						while(s < 9){
+							Block clr = set3.getRelative(BlockFace.SOUTH, s);
+							clr.setTypeId(18);
+							s++;
+						}
+						s = 1;
+					}else if(i1 == 17  && i == 4){
+
+						while(s < 9){
+							Block clr = set3.getRelative(BlockFace.SOUTH, s);
+							clr.setTypeId(18);
+							s++;
+						}
+						s = 1;
+					}else if(i1 == 16  && i == 3){
+
+						while(s < 9){
+							Block clr = set3.getRelative(BlockFace.SOUTH, s);
+							clr.setTypeId(18);
+							s++;
+						}
+						s = 1;
+					}else if(i1 == 15  && i == 2){
+
+						while(s < 9){
+							Block clr = set3.getRelative(BlockFace.SOUTH, s);
+							clr.setTypeId(18);
+							s++;
+						}
+						s = 1;
+					}else if(i1 == 14  && i == 1){
+
+						while(s < 7){
+							Block clr = set3.getRelative(BlockFace.SOUTH, s);
+							clr.setTypeId(18);
+							s++;
+						}
+						s = 1;
+					}
+								
+					//end corner 2//
+					
+					//END OTHER SIDE
+					
+					
+					i1++;
 				}
-				setter = 1;
-				set1 = set1.getRelative(BlockFace.WEST, 1);
-				while(setter <= a){
-					set1 = otherset.getRelative(BlockFace.WEST, setter);
-					set1.setTypeId(18);
-					setter++;
-				}
-				Block setter2 = otherset.getRelative(BlockFace.NORTH, a);
-				setter = 1;
-				while(setter <= a){
-					set1 = setter2.getRelative(BlockFace.EAST, setter);
-					set1.setTypeId(18);
-					setter++;
-				}
-				setter = 1;
-				set1 = set1.getRelative(BlockFace.WEST, 1);
-				while(setter <= a){
-					set1 = setter2.getRelative(BlockFace.WEST, setter);
-					set1.setTypeId(18);
-					setter++;
-				}
-				u++;
-				newx++;
-				x++;
-				}
+				//set1.setTypeId(18);
+				i++;
+			}
+			
+				x++;				
 			}
 		return a;
 	  }
